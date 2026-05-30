@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import LogoDark from '@/components/ui/LogoDark'
+import SocialLinks from '@/components/ui/SocialLinks'
 
 const navLinks = [
   { label: 'Mes services', href: '#services' },
@@ -41,7 +42,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-4">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -54,12 +55,15 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href={href('#contact')}
-          className="hidden md:inline-flex px-5 py-2 bg-teal text-white text-sm font-semibold font-dm-sans rounded-sm hover:bg-teal/90 transition-colors"
-        >
-          Parlons de votre projet
-        </a>
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href={href('#contact')}
+            className="hidden md:inline-flex px-5 py-2 bg-teal text-white text-sm font-semibold font-dm-sans rounded-sm hover:bg-teal/90 transition-colors"
+          >
+            Parlons de votre projet
+          </a>
+          <SocialLinks />
+        </div>
 
         {/* Mobile burger button */}
         <button
@@ -97,6 +101,7 @@ export default function Navbar() {
           >
             Parlons de votre projet
           </a>
+          <SocialLinks size="lg" gap="gap-6" className="mt-8 justify-center" />
         </div>
       )}
     </header>
