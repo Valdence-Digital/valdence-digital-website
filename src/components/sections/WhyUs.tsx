@@ -3,15 +3,15 @@ import SectionWrapper from '@/components/ui/SectionWrapper'
 const reasons = [
   {
     number: '01',
-    title: 'Expertise technique',
+    title: 'Expertise qui sert votre projet',
     description:
-      'Full-stack confirmé (C#/.NET, Next.js, PostgreSQL…), plus de 10 ans de pratique en entreprise et en indépendant. Je maîtrise les technologies que je recommande.',
+      'Full-stack confirmé — C#/.NET, Next.js, PostgreSQL et plus. 10 ans de pratique, côté entreprise et indépendant. Je choisis les bons outils pour votre contexte, pas ceux qui font le buzz.',
   },
   {
     number: '02',
-    title: 'Accompagnement sur mesure',
+    title: 'Impliqué dès le départ',
     description:
-      "Chaque projet est unique. J'adapte mon approche à votre contexte, vos contraintes et vos objectifs — pas l'inverse.",
+      'Du brief au déploiement, vous savez où en est le projet. Pas de surprises, pas de tunnel de trois mois sans nouvelles — on avance ensemble.',
   },
   {
     number: '03',

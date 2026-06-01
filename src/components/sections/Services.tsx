@@ -23,7 +23,7 @@ const services: { Icon: LucideIcon; title: string; description: string }[] = [
   },
   {
     Icon: Users,
-    title: 'Consulting / AT',
+    title: 'Consulting & Assistance Technique',
     description:
       "Accompagnement technique en entreprise : audit, conseil, renfort d'équipe. Une expertise full-stack disponible quand vous en avez besoin.",
   },
@@ -39,7 +39,7 @@ export default function Services() {
         Mes services
       </h2>
       <p className="font-dm-sans text-muted max-w-xl mb-12">
-        Quatre offres complémentaires pour couvrir l&apos;ensemble de vos besoins digitaux.
+        De la vitrine au logiciel métier — et au renfort technique pour agences et équipes internes.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map(({ Icon, title, description }) => (
