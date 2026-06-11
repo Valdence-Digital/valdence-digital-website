@@ -1,0 +1,57 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# CCBot
+User-agent: CCBot
+Allow: /
+
+# FacebookBot
+User-agent: FacebookBot
+Disallow: /
+
+# ia_archiver
+User-agent: ia_archiver
+Disallow: /
+
+# Host
+Host: https://digital.valdence.com
+
+# Sitemaps
+Sitemap: https://www.sagesse-holistique.fr/sitemap.xml
