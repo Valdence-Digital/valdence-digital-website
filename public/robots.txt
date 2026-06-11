@@ -54,4 +54,4 @@ Disallow: /
 Host: https://digital.valdence.com
 
 # Sitemaps
-Sitemap: https://www.sagesse-holistique.fr/sitemap.xml
+Sitemap: https://digital.valdence.com/sitemap.xml
