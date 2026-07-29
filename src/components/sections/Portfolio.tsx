@@ -14,6 +14,18 @@ const projects = [
     image: '/portfolio/jonathan-deymier.webp',
     url: 'https://www.jonathandeymier.com/',
   },
+  {
+    title: 'Harmonie Piano',
+    category: 'Application e-learning',
+    image: '/portfolio/harmonie-piano.webp',
+    url: 'https://beta.harmonie-piano.com/',
+  },
+  {
+    title: 'Club Business Invincible',
+    category: 'Site vitrine',
+    image: '/portfolio/club-business-invincible.webp',
+    url: 'https://www.club-business-invincible.fr/',
+  },
 ]
 
 export default function Portfolio() {
