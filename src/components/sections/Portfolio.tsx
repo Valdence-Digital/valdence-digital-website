@@ -83,7 +83,12 @@ export default function Portfolio() {
                   Voir le site →
                 </a>
               </div>
-              <ExpandableText text={project.description} className="mt-4" />
+              {/* -mx-6/-mb-6 : le bouton déborde sur le padding (p-6) de la card pour couvrir toute sa largeur, jusqu'au bord bas */}
+              <ExpandableText
+                text={project.description}
+                className="mt-4"
+                buttonClassName="-mx-6 -mb-6 box-content px-6 pb-3"
+              />
             </div>
           </div>
         ))}

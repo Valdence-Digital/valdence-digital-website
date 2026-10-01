@@ -4,7 +4,15 @@ import { useState, useRef, useEffect } from 'react'
 
 const MAX_LINES = 5
 
-export default function ExpandableText({ text, className = '' }: { text: string; className?: string }) {
+export default function ExpandableText({
+  text,
+  className = '',
+  buttonClassName = '',
+}: {
+  text: string
+  className?: string
+  buttonClassName?: string
+}) {
   const [expanded, setExpanded] = useState(false)
   const [overflows, setOverflows] = useState(false)
   const textRef = useRef<HTMLParagraphElement>(null)
@@ -25,7 +33,7 @@ export default function ExpandableText({ text, className = '' }: { text: string;
   }, [])
 
   return (
-    <div className={className}>
+    <div className={`flex flex-col ${className}`}>
       <p
         ref={textRef}
         className={`font-dm-sans text-muted text-base leading-relaxed ${expanded ? '' : 'line-clamp-5'}`}
@@ -38,7 +46,7 @@ export default function ExpandableText({ text, className = '' }: { text: string;
           type="button"
           onClick={() => setExpanded((v) => !v)}
           aria-expanded={expanded}
-          className="relative z-10 mt-2 font-dm-sans text-sm text-teal cursor-pointer hover:underline focus:outline-none focus-visible:underline"
+          className={`relative z-10 flex min-h-11 items-center text-left font-dm-sans text-sm text-teal cursor-pointer hover:underline focus:outline-none focus-visible:underline ${buttonClassName}`}
         >
           {expanded ? 'Voir moins' : 'Voir plus…'}
         </button>
