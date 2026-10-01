@@ -3,28 +3,36 @@ import SectionWrapper from '@/components/ui/SectionWrapper'
 
 const projects = [
   {
-    title: 'Sagesse Holistique',
+    title: "Sagesse d'Âme",
     category: 'Site vitrine',
     image: '/portfolio/sagesse-holistique.webp',
     url: 'https://www.sagesse-holistique.fr/',
+    description:
+      "Conception et développement complets d'un site vitrine en Next.js (App Router) : architecture moderne, performances optimisées et SEO intégré dès la conception. Hébergement pris en charge sur une infrastructure souveraine européenne, incluant le déploiement, la supervision et les sauvegardes automatisées. Maintien en condition opérationnelle et évolutions fonctionnelles assurés en continu, selon les besoins du client.",
   },
   {
     title: 'Jonathan Deymier',
     category: 'Refonte WordPress',
     image: '/portfolio/jonathan-deymier.webp',
     url: 'https://www.jonathandeymier.com/',
+    description:
+      "Intervention sur un site WordPress existant : mise à jour des contenus textuels et visuels de plusieurs pages ciblées. Reprise de la mise en page de ces pages pour garantir la cohérence graphique et améliorer l'expérience utilisateur. Livraison après validation du client et tests de rendu sur ordinateur et mobile.",
   },
   {
     title: 'Harmonie Piano',
     category: 'Application e-learning',
     image: '/portfolio/harmonie-piano.webp',
     url: 'https://formation.harmonie-piano.com/',
+    description:
+      "Migration vers Next.js d'une application e-learning WordPress, pour la rendre robuste, rapide et simple à faire évoluer, en conservant le design existant. L'intégralité des exercices de piano a été recodée en TypeScript pour répondre au cahier des charges : des exercices plus beaux, plus rapides et débarrassés des bugs existants. Mise en place de webhooks systeme.io pour gérer les ventes des différentes offres de formation, avec automatisation de l'invitation à l'inscription et de l'activation des formations achetées. Création d'un tableau de bord complet d'administration des élèves, pour pallier d'éventuelles défaillances des webhooks (webhook non envoyé, par exemple) ou des problèmes sur les comptes des élèves.",
   },
   {
     title: 'Club Business Invincible',
     category: 'Site vitrine',
     image: '/portfolio/club-business-invincible.webp',
     url: 'https://www.club-business-invincible.fr/',
+    description:
+      "Conception et développement complets d'un site vitrine en Next.js (App Router) : architecture moderne, performances optimisées et SEO intégré dès la conception. Déploiement et mise en ligne sur l'hébergement du client.",
   },
 ]
 
@@ -56,22 +64,25 @@ export default function Portfolio() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div className="p-6 flex items-start justify-between">
-              <div>
-                <span className="inline-block text-sm font-dm-sans font-medium text-teal bg-teal/10 px-2 py-0.5 rounded mb-2">
-                  {project.category}
-                </span>
-                <h3 className="font-sora text-lg font-semibold text-foreground">{project.title}</h3>
+            <div className="p-6">
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="inline-block text-sm font-dm-sans font-medium text-teal bg-teal/10 px-2 py-0.5 rounded mb-2">
+                    {project.category}
+                  </span>
+                  <h3 className="font-sora text-lg font-semibold text-foreground">{project.title}</h3>
+                </div>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="text-base font-dm-sans text-teal group-hover:underline mt-1 whitespace-nowrap after:absolute after:inset-0 after:content-['']"
+                  aria-label={`Voir le site ${project.title}`}
+                >
+                  Voir le site →
+                </a>
               </div>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="text-base font-dm-sans text-teal group-hover:underline mt-1 whitespace-nowrap after:absolute after:inset-0 after:content-['']"
-                aria-label={`Voir le site ${project.title}`}
-              >
-                Voir le site →
-              </a>
+              <p className="font-dm-sans text-muted text-base leading-relaxed mt-4">{project.description}</p>
             </div>
           </div>
         ))}
