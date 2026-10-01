@@ -7,10 +7,12 @@ const MAX_LINES = 5
 export default function ExpandableText({
   text,
   className = '',
+  textClassName = 'text-muted',
   buttonClassName = '',
 }: {
   text: string
   className?: string
+  textClassName?: string
   buttonClassName?: string
 }) {
   const [expanded, setExpanded] = useState(false)
@@ -36,7 +38,7 @@ export default function ExpandableText({
     <div className={`flex flex-col ${className}`}>
       <p
         ref={textRef}
-        className={`font-dm-sans text-muted text-base leading-relaxed ${expanded ? '' : 'line-clamp-5'}`}
+        className={`font-dm-sans text-base leading-relaxed ${textClassName} ${expanded ? '' : 'line-clamp-5'}`}
       >
         {text}
       </p>
