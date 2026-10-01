@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import SectionWrapper from '@/components/ui/SectionWrapper'
+import ExpandableText from '@/components/ui/ExpandableText'
 
 const projects = [
   {
@@ -82,7 +83,7 @@ export default function Portfolio() {
                   Voir le site →
                 </a>
               </div>
-              <p className="font-dm-sans text-muted text-base leading-relaxed mt-4">{project.description}</p>
+              <ExpandableText text={project.description} className="mt-4" />
             </div>
           </div>
         ))}
