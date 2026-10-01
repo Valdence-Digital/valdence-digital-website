@@ -18,7 +18,7 @@ const projects = [
     title: 'Harmonie Piano',
     category: 'Application e-learning',
     image: '/portfolio/harmonie-piano.webp',
-    url: 'https://beta.harmonie-piano.com/',
+    url: 'https://formation.harmonie-piano.com/',
   },
   {
     title: 'Club Business Invincible',
@@ -44,7 +44,7 @@ export default function Portfolio() {
         {projects.map((project, i) => (
           <div
             key={project.title}
-            className="group overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm hover:border-teal/30 hover:shadow-lg transition-all duration-300"
+            className="group relative overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm hover:border-teal/30 hover:shadow-lg focus-within:border-teal/30 focus-within:shadow-lg transition-all duration-300"
           >
             <div className="relative w-full h-52 overflow-hidden bg-gray-50">
               <Image
@@ -67,7 +67,7 @@ export default function Portfolio() {
                 href={project.url}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="text-base font-dm-sans text-teal hover:underline mt-1 whitespace-nowrap"
+                className="text-base font-dm-sans text-teal group-hover:underline mt-1 whitespace-nowrap after:absolute after:inset-0 after:content-['']"
                 aria-label={`Voir le site ${project.title}`}
               >
                 Voir le site →
