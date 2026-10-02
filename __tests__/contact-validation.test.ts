@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest'
 import { contactSchema } from '@/lib/contact-validation'
 
 const valid = {

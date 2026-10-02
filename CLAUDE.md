@@ -15,8 +15,8 @@ pnpm dev        # Start dev server (http://localhost:3000)
 pnpm build      # Production build (outputs to .next/standalone)
 pnpm start      # Start production server
 pnpm lint       # Run ESLint
-pnpm test       # Run all Jest tests
-pnpm test -- __tests__/contact-validation.test.ts  # Run a single test file
+pnpm test       # Run all Vitest tests
+pnpm test __tests__/contact-validation.test.ts  # Run a single test file
 ```
 
 ## Architecture
@@ -65,7 +65,7 @@ Built as `output: 'standalone'`. The Dockerfile uses a two-stage build (builder 
 
 ### Tests
 
-Jest + ts-jest. Tests live in `__tests__/` and cover pure utility functions only:
+Vitest (config in `vitest.config.mts`, test APIs imported explicitly from `vitest`). Tests live in `__tests__/` and cover pure utility functions only:
 - `contact-validation.test.ts` — Zod schema edge cases (phone formats, RGPD, honeypot)
 - `google-places.test.ts` — `transformReview` mapping and optional field defaults
 
