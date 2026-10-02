@@ -37,7 +37,7 @@ export default function Navbar() {
         className="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between"
         aria-label="Navigation principale"
       >
-        <a href={isHome ? '#' : '/'} aria-label="Valdence Digital — retour en haut">
+        <a href={isHome ? '#' : '/'} aria-label="Valdence Digital - retour en haut">
           <LogoDark className="h-14 w-auto" />
         </a>
 

@@ -1,4 +1,4 @@
-# Easter Egg VS Code Page — Design Spec
+# Easter Egg VS Code Page - Design Spec
 
 **Goal:** Créer une page `/yannick` qui simule un éditeur VS Code affichant un composant React absurde avec la photo de profil en "aperçu live".
 
@@ -11,14 +11,14 @@
 ## Route & Metadata
 
 - **Route :** `/yannick`
-- **Metadata :** `title: 'Yannick.tsx — Valdence Digital'`, `robots: { index: false, follow: false }`
-- **Pas de Navbar ni Footer** — page autonome, plein écran
+- **Metadata :** `title: 'Yannick.tsx - Valdence Digital'`, `robots: { index: false, follow: false }`
+- **Pas de Navbar ni Footer** - page autonome, plein écran
 
 ## Layout VS Code (dark, `#1e1e1e`)
 
 ### Barre de titre
 - Boutons macOS simulés (rouge `#ff5f56`, jaune `#ffbd2e`, vert `#27c93f`)
-- Titre centré : `yannick.tsx — Valdence Digital`
+- Titre centré : `yannick.tsx - Valdence Digital`
 - Fond `#3c3c3c`
 
 ### Explorer latéral (gauche, ~220px)
@@ -35,7 +35,7 @@ Titre `EXPLORATEUR` puis arborescence :
 ### Onglets éditeur
 Un seul onglet actif : `● yannick.tsx` (point = unsaved changes)
 
-### Panneau principal — Éditeur (gauche 55%)
+### Panneau principal - Éditeur (gauche 55%)
 Faux code TypeScript avec syntax highlighting via classes Tailwind + couleurs VS Code :
 - Numéros de ligne à gauche
 - JSDoc absurde de ~10 lignes pour la fonction principale

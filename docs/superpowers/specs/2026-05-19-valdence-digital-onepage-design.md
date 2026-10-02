@@ -1,4 +1,4 @@
-# Valdence Digital — Site One-Page : Design Spec
+# Valdence Digital - Site One-Page : Design Spec
 Date : 2026-05-19
 
 ---
@@ -97,12 +97,12 @@ Toutes injectées via Coolify au déploiement.
 
 ### Typographie
 
-- Titre display : **Sora** (Google Fonts) — grasse, géométrique, moderne
-- Corps : **DM Sans** (Google Fonts) — lisible, sobre, bonne lisibilité à petite taille
+- Titre display : **Sora** (Google Fonts) - grasse, géométrique, moderne
+- Corps : **DM Sans** (Google Fonts) - lisible, sobre, bonne lisibilité à petite taille
 
 ### Motifs décoratifs
 
-Cercles teal concentriques en arrière-plan du Hero et d'autres sections, opacité faible (5–15%), positionnés en coin supérieur droit. Ils apportent profondeur et identité sans alourdir la lecture.
+Cercles teal concentriques en arrière-plan du Hero et d'autres sections, opacité faible (5-15%), positionnés en coin supérieur droit. Ils apportent profondeur et identité sans alourdir la lecture.
 
 ### Logo
 
@@ -111,7 +111,7 @@ Cercles teal concentriques en arrière-plan du Hero et d'autres sections, opacit
 
 ---
 
-## 7. Sections — détail
+## 7. Sections - détail
 
 ### 7.1 Navbar
 
@@ -123,10 +123,10 @@ Cercles teal concentriques en arrière-plan du Hero et d'autres sections, opacit
 ### 7.2 Hero
 
 **Accroche principale :**
-> Du code au clic — construisons ensemble.
+> Du code au clic - construisons ensemble.
 
 **Sous-titre :**
-> Développeur full-stack indépendant, nous travaillons avec vous — pas à votre place — pour créer des outils digitaux qui vous ressemblent.
+> Développeur full-stack indépendant, nous travaillons avec vous - pas à votre place - pour créer des outils digitaux qui vous ressemblent.
 
 **CTAs :**
 - Principal : "Parlons de votre projet" → `#contact`
@@ -149,9 +149,9 @@ Cercles teal concentriques en arrière-plan du Hero et d'autres sections, opacit
 
 3 arguments avec icône, titre et courte description :
 
-1. **Expertise technique** — Full-stack confirmé (C#/.NET, Next.js, PostgreSQL…), 10+ ans de pratique en entreprise et en indépendant.
-2. **Accompagnement sur mesure** — Chaque projet est unique. Nous adaptons notre approche à votre contexte, vos contraintes et vos objectifs.
-3. **Un partenaire, pas un exécutant** — Nous construisons avec vous, pas à votre place. Votre compréhension du projet est notre priorité.
+1. **Expertise technique** - Full-stack confirmé (C#/.NET, Next.js, PostgreSQL…), 10+ ans de pratique en entreprise et en indépendant.
+2. **Accompagnement sur mesure** - Chaque projet est unique. Nous adaptons notre approche à votre contexte, vos contraintes et vos objectifs.
+3. **Un partenaire, pas un exécutant** - Nous construisons avec vous, pas à votre place. Votre compréhension du projet est notre priorité.
 
 ### 7.5 Réalisations (Portfolio)
 
@@ -172,13 +172,13 @@ Disposition : photo (placeholder carré arrondi) à gauche + texte à droite (de
 **Titre :** CEO
 
 **Texte :**
-> Développeur full-stack indépendant depuis 2014, je conçois et réalise des sites vitrines, boutiques en ligne, applications web et intégrations sur mesure. Mon parcours en entreprise — de l'e-commerce grand public (Chausson.fr) aux marketplaces B2C/B2B (Opisto), en passant par des projets de R&D et de réalité augmentée — m'a forgé une vision à la fois technique et produit, rare chez un prestataire indépendant.
+> Développeur full-stack indépendant depuis 2014, je conçois et réalise des sites vitrines, boutiques en ligne, applications web et intégrations sur mesure. Mon parcours en entreprise - de l'e-commerce grand public (Chausson.fr) aux marketplaces B2C/B2B (Opisto), en passant par des projets de R&D et de réalité augmentée - m'a forgé une vision à la fois technique et produit, rare chez un prestataire indépendant.
 >
 > Je travaille avec une attention constante portée à la qualité du code, à la maintenabilité et à l'évolution de votre projet dans le temps.
 >
-> Ce qui me distingue : je ne sous-traite pas vos besoins, je les comprends. Chaque projet démarre par une vraie conversation — pour livrer quelque chose qui vous ressemble et qui fonctionne.
+> Ce qui me distingue : je ne sous-traite pas vos besoins, je les comprends. Chaque projet démarre par une vraie conversation - pour livrer quelque chose qui vous ressemble et qui fonctionne.
 
-**Lien :** [LinkedIn](https://www.linkedin.com/in/bernardyannick/) — icône + texte, `target="_blank"`, `rel="nofollow noopener noreferrer`
+**Lien :** [LinkedIn](https://www.linkedin.com/in/bernardyannick/) - icône + texte, `target="_blank"`, `rel="nofollow noopener noreferrer`
 
 **Badges technologiques** (rangée en bas de la section) :
 Icônes SVG via **Simple Icons** (bibliothèque open-source) + nom pour chaque techno : `C#` · `.NET` · `Next.js` · `React` · `TypeScript` · `PostgreSQL` · `SQL Server` · `WordPress`
@@ -212,7 +212,7 @@ Icônes SVG via **Simple Icons** (bibliothèque open-source) + nom pour chaque t
 > J'ai été informé.e de mon droit de suppression, mon droit de consultation, et mon droit de modification des données personnelles récoltées sur ce formulaire. Mais aussi de la procédure d'exercice de mes droits, de la durée de conservation de mes données, et des conditions de gestions de ces dernières.
 
 **Server Action `contact.ts` :**
-1. Vérifier que le champ honeypot `website` est vide — sinon rejeter silencieusement
+1. Vérifier que le champ honeypot `website` est vide - sinon rejeter silencieusement
 2. Valider tous les champs obligatoires côté serveur
 3. Valider le format email et le format téléphone
 4. Envoyer via Nodemailer + SMTP OVH vers `SMTP_TO`
@@ -225,7 +225,7 @@ Icônes SVG via **Simple Icons** (bibliothèque open-source) + nom pour chaque t
 - Fond : `#0f2a27` (teal très sombre)
 - Logo blanc (`logo-light.svg`) centré ou aligné gauche
 - Liens : Mentions légales · Politique de confidentialité
-- Copyright : `© 2026 Valdence Digital — Tous droits réservés`
+- Copyright : `© 2026 Valdence Digital - Tous droits réservés`
 
 ---
 
@@ -234,7 +234,7 @@ Icônes SVG via **Simple Icons** (bibliothèque open-source) + nom pour chaque t
 Build multi-stage avec `output: 'standalone'` dans `next.config.ts` :
 
 ```dockerfile
-# Stage 1 — Builder
+# Stage 1 - Builder
 FROM node:lts-slim AS builder
 WORKDIR /app
 COPY package*.json ./
@@ -242,7 +242,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2 — Runner
+# Stage 2 - Runner
 FROM node:lts-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
@@ -278,8 +278,8 @@ out/
 
 Dans `app/layout.tsx` :
 
-- `title` : "Valdence Digital — Développement web & consulting"
-- `description` : "Sites vitrines, e-commerce, applications web et consulting technique — Yannick Bernard, développeur full-stack indépendant depuis 2014."
+- `title` : "Valdence Digital - Développement web & consulting"
+- `description` : "Sites vitrines, e-commerce, applications web et consulting technique - Yannick Bernard, développeur full-stack indépendant depuis 2014."
 - `og:image` placeholder
 - `lang="fr"`
 

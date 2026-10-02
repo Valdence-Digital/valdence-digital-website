@@ -4,7 +4,7 @@ import Navbar from '@/components/sections/Navbar'
 import Footer from '@/components/sections/Footer'
 
 export const metadata: Metadata = {
-  title: 'Page introuvable — Valdence Digital',
+  title: 'Page introuvable - Valdence Digital',
   robots: { index: false, follow: false },
 }
 

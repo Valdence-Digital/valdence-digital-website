@@ -4,7 +4,7 @@ import Footer from '@/components/sections/Footer'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 
 export const metadata: Metadata = {
-  title: 'Mentions légales — Valdence Digital',
+  title: 'Mentions légales - Valdence Digital',
   robots: { index: false, follow: false },
 }
 

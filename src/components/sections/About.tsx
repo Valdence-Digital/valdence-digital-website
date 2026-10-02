@@ -78,9 +78,9 @@ export default function About() {
             <p>
               Développeur full-stack indépendant depuis 2014, je conçois et réalise des sites
               vitrines, boutiques en ligne, applications web et intégrations sur mesure. Mon
-              parcours en entreprise — de l&apos;e-commerce grand public (Chausson.fr) aux
+              parcours en entreprise - de l&apos;e-commerce grand public (Chausson.fr) aux
               marketplaces B2C/B2B (Opisto), en passant par des projets de R&amp;D et de
-              réalité augmentée — m&apos;a forgé une vision à la fois technique et produit,
+              réalité augmentée - m&apos;a forgé une vision à la fois technique et produit,
               rare chez un prestataire indépendant.
             </p>
             <p>
@@ -89,7 +89,7 @@ export default function About() {
             </p>
             <p>
               Ce qui me distingue&nbsp;: je ne sous-traite pas vos besoins, je les comprends.
-              Chaque projet démarre par une vraie conversation — pour livrer quelque chose qui
+              Chaque projet démarre par une vraie conversation - pour livrer quelque chose qui
               vous ressemble et qui fonctionne.
             </p>
           </div>

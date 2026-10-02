@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <LogoLight className="h-24 w-auto" />
           <p className="font-dm-sans text-base text-white/50">
-            © 2026 Valdence Digital — Tous droits réservés
+            © 2026 Valdence Digital - Tous droits réservés
           </p>
         </div>
         <SocialLinks variant="light" size="md" className="hidden md:flex" />

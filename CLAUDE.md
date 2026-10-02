@@ -31,19 +31,19 @@ Each section has an HTML `id` used for scroll navigation: `#services`, `#why-us`
 
 ### Component layers
 
-- **`src/components/sections/`** — full-width page sections. Most are Server Components except `Navbar` and `Contact` which are `'use client'`.
-- **`src/components/ui/`** — shared primitives: `Button`, `SectionWrapper`, `BackToTop`, `ReviewCard`, `SocialLinks`, logos.
-- **`src/app/actions/contact.ts`** — Server Action (`'use server'`) that validates with Zod then sends via Nodemailer.
-- **`src/lib/contact-validation.ts`** — Zod schema used by both the Client (`Contact.tsx` for inline field errors) and the Server Action. Pure, no side effects.
-- **`src/lib/google-places.ts`** — fetches Google Places API with `revalidate: 86400` (ISR). Returns `{ ok: true, reviews }` or `{ ok: false, placeUrl }`.
-- **`src/data/reviews.ts`** — static fallback reviews shown when the Google API is unavailable or not configured.
+- **`src/components/sections/`** - full-width page sections. Most are Server Components except `Navbar` and `Contact` which are `'use client'`.
+- **`src/components/ui/`** - shared primitives: `Button`, `SectionWrapper`, `BackToTop`, `ReviewCard`, `SocialLinks`, logos.
+- **`src/app/actions/contact.ts`** - Server Action (`'use server'`) that validates with Zod then sends via Nodemailer.
+- **`src/lib/contact-validation.ts`** - Zod schema used by both the Client (`Contact.tsx` for inline field errors) and the Server Action. Pure, no side effects.
+- **`src/lib/google-places.ts`** - fetches Google Places API with `revalidate: 86400` (ISR). Returns `{ ok: true, reviews }` or `{ ok: false, placeUrl }`.
+- **`src/data/reviews.ts`** - static fallback reviews shown when the Google API is unavailable or not configured.
 
 ### Key design patterns
 
 - **`SectionWrapper`** wraps every section with consistent `py-12 md:py-20 px-4 md:px-8` padding and a `max-w-6xl mx-auto` inner container.
 - **Contact form dual validation**: Zod runs client-side on every keystroke (errors shown on blur) and again server-side in the action. The client imports `contactSchema` directly from `src/lib/contact-validation.ts`.
 - **Honeypot spam protection**: a hidden `website` field; if non-empty, the server action silently returns `{ success: true }`.
-- **Tech badges in About**: uses `simple-icons` npm package — each icon exports `{ path, hex }` for inline SVG rendering.
+- **Tech badges in About**: uses `simple-icons` npm package - each icon exports `{ path, hex }` for inline SVG rendering.
 
 ### Tailwind theme
 
@@ -65,9 +65,10 @@ Built as `output: 'standalone'`. The Dockerfile uses a two-stage build (builder 
 
 ### Tests
 
-Vitest (config in `vitest.config.mts`, test APIs imported explicitly from `vitest`). Tests live in `__tests__/` and cover pure utility functions only:
-- `contact-validation.test.ts` — Zod schema edge cases (phone formats, RGPD, honeypot)
-- `google-places.test.ts` — `transformReview` mapping and optional field defaults
+Vitest (config in `vitest.config.mts`, test APIs imported explicitly from `vitest`). Tests live in `__tests__/`:
+- `contact-validation.test.ts` - Zod schema edge cases (phone formats, RGPD, honeypot)
+- `google-places.test.ts` - `transformReview` mapping and optional field defaults
+- `no-long-dashes.test.ts` - scans every text file in the repo and fails on any en dash or em dash (literal or HTML entity); use a plain hyphen instead
 
 ## Skill routing
 

@@ -1,4 +1,4 @@
-# Stage 1 — Dependencies + build
+# Stage 1 - Dependencies + build
 FROM node:lts-alpine AS builder
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm install -g pnpm && pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm build
 
-# Stage 2 — Production runner
+# Stage 2 - Production runner
 FROM node:lts-alpine AS runner
 WORKDIR /app
 

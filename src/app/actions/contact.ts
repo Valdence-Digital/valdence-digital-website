@@ -66,10 +66,10 @@ export async function submitContact(
       from: `"Valdence Digital" <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_TO,
       replyTo: data.email,
-      subject: `Nouveau contact — ${esc(data.prenom)} ${esc(data.nom)}`,
+      subject: `Nouveau contact - ${esc(data.prenom)} ${esc(data.nom)}`,
       text: lines.join('\n'),
       html: `
-        <h2>Nouveau contact — Valdence Digital</h2>
+        <h2>Nouveau contact - Valdence Digital</h2>
         <table cellpadding="6">
           <tr><td><strong>Nom</strong></td><td>${esc(data.nom)}</td></tr>
           <tr><td><strong>Prénom</strong></td><td>${esc(data.prenom)}</td></tr>

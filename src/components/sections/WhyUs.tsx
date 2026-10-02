@@ -5,19 +5,19 @@ const reasons = [
     number: '01',
     title: 'Expertise qui sert votre projet',
     description:
-      'Full-stack confirmé — C#/.NET, Next.js, PostgreSQL et plus. 10 ans de pratique, côté entreprise et indépendant. Je choisis les bons outils pour votre contexte, pas ceux qui font le buzz.',
+      'Full-stack confirmé - C#/.NET, Next.js, PostgreSQL et plus. 10 ans de pratique, côté entreprise et indépendant. Je choisis les bons outils pour votre contexte, pas ceux qui font le buzz.',
   },
   {
     number: '02',
     title: 'Impliqué dès le départ',
     description:
-      'Du brief au déploiement, vous savez où en est le projet. Pas de surprises, pas de tunnel de trois mois sans nouvelles — on avance ensemble.',
+      'Du brief au déploiement, vous savez où en est le projet. Pas de surprises, pas de tunnel de trois mois sans nouvelles - on avance ensemble.',
   },
   {
     number: '03',
     title: 'Un partenaire, pas un exécutant',
     description:
-      "Je construis avec vous, pas à votre place. Votre compréhension du projet est ma priorité — je ne livre pas une boîte noire, je vous l'explique.",
+      "Je construis avec vous, pas à votre place. Votre compréhension du projet est ma priorité - je ne livre pas une boîte noire, je vous l'explique.",
   },
 ]
 

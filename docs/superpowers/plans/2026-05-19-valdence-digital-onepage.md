@@ -1,4 +1,4 @@
-# Valdence Digital — One-Page Site Implementation Plan
+# Valdence Digital - One-Page Site Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -19,7 +19,7 @@
 |---|---|
 | `app/layout.tsx` | Global metadata (SEO), font variables, `lang="fr"` |
 | `app/globals.css` | CSS variables, `scroll-behavior: smooth`, base font rules |
-| `app/page.tsx` | One-page composition — imports all sections |
+| `app/page.tsx` | One-page composition - imports all sections |
 | `app/actions/contact.ts` | Server Action: extract FormData → validate → send via Nodemailer |
 | `lib/contact-validation.ts` | Pure validation logic (no side effects, fully testable) |
 | `lib/google-places.ts` | Google Places API fetch + `transformReview` utility |
@@ -34,10 +34,10 @@
 | `components/sections/Reviews.tsx` | Google reviews (async Server Component) + fallback |
 | `components/sections/Contact.tsx` | Form with Server Action, honeypot, RGPD (Client) |
 | `components/sections/Footer.tsx` | Logo light + copyright + legal links |
-| `public/logo-dark.svg` | Logo placeholder — noir (fond clair) |
-| `public/logo-light.svg` | Logo placeholder — blanc (footer) |
-| `public/portfolio/sagesse-holistique.webp` | Screenshot 800×500 — à remplacer |
-| `public/portfolio/jonathan-deymier.webp` | Screenshot 800×500 — à remplacer |
+| `public/logo-dark.svg` | Logo placeholder - noir (fond clair) |
+| `public/logo-light.svg` | Logo placeholder - blanc (footer) |
+| `public/portfolio/sagesse-holistique.webp` | Screenshot 800×500 - à remplacer |
+| `public/portfolio/jonathan-deymier.webp` | Screenshot 800×500 - à remplacer |
 | `.env.example` | Variables d'env template (commité) |
 | `Dockerfile` | Multi-stage build standalone pour Coolify |
 | `__tests__/contact-validation.test.ts` | Unit tests validation formulaire |
@@ -121,7 +121,7 @@ export default config
 
 - [ ] **Step 5: Create .env.local and .env.example**
 
-Create `.env.local` (non commité — configure avec tes vraies valeurs) :
+Create `.env.local` (non commité - configure avec tes vraies valeurs) :
 ```
 SMTP_HOST=ssl0.ovh.net
 SMTP_PORT=465
@@ -216,13 +216,13 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Valdence Digital — Développement web & consulting',
+  title: 'Valdence Digital - Développement web & consulting',
   description:
-    'Sites vitrines, e-commerce, applications web et consulting technique — Yannick Bernard, développeur full-stack indépendant depuis 2014.',
+    'Sites vitrines, e-commerce, applications web et consulting technique - Yannick Bernard, développeur full-stack indépendant depuis 2014.',
   openGraph: {
-    title: 'Valdence Digital — Développement web & consulting',
+    title: 'Valdence Digital - Développement web & consulting',
     description:
-      'Sites vitrines, e-commerce, applications web et consulting technique — Yannick Bernard, développeur full-stack indépendant depuis 2014.',
+      'Sites vitrines, e-commerce, applications web et consulting technique - Yannick Bernard, développeur full-stack indépendant depuis 2014.',
     type: 'website',
     locale: 'fr_FR',
   },
@@ -380,7 +380,7 @@ export default function Navbar() {
         className="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between"
         aria-label="Navigation principale"
       >
-        <a href="#" aria-label="Valdence Digital — retour en haut">
+        <a href="#" aria-label="Valdence Digital - retour en haut">
           <Image src="/logo-dark.svg" alt="Valdence Digital" width={140} height={35} priority />
         </a>
 
@@ -484,12 +484,12 @@ export default function Hero() {
           Valdence Digital
         </p>
         <h1 className="font-sora text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6 max-w-3xl">
-          Du code au clic —{' '}
+          Du code au clic -{' '}
           <span className="text-teal">construisons ensemble.</span>
         </h1>
         <p className="font-dm-sans text-lg text-muted max-w-xl mb-10 leading-relaxed">
-          Développeur full-stack indépendant, nous travaillons avec vous — pas à votre
-          place — pour créer des outils digitaux qui vous ressemblent.
+          Développeur full-stack indépendant, nous travaillons avec vous - pas à votre
+          place - pour créer des outils digitaux qui vous ressemblent.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button href="#contact" variant="primary">Parlons de votre projet →</Button>
@@ -650,13 +650,13 @@ const reasons = [
     number: '02',
     title: 'Accompagnement sur mesure',
     description:
-      "Chaque projet est unique. Nous adaptons notre approche à votre contexte, vos contraintes et vos objectifs — pas l'inverse.",
+      "Chaque projet est unique. Nous adaptons notre approche à votre contexte, vos contraintes et vos objectifs - pas l'inverse.",
   },
   {
     number: '03',
     title: 'Un partenaire, pas un exécutant',
     description:
-      "Nous construisons avec vous, pas à votre place. Votre compréhension du projet est notre priorité — nous ne livrons pas une boîte noire, nous vous l'expliquons.",
+      "Nous construisons avec vous, pas à votre place. Votre compréhension du projet est notre priorité - nous ne livrons pas une boîte noire, nous vous l'expliquons.",
   },
 ]
 
@@ -898,9 +898,9 @@ export default function About() {
             <p>
               Développeur full-stack indépendant depuis 2014, je conçois et réalise des sites
               vitrines, boutiques en ligne, applications web et intégrations sur mesure. Mon
-              parcours en entreprise — de l&apos;e-commerce grand public (Chausson.fr) aux
+              parcours en entreprise - de l&apos;e-commerce grand public (Chausson.fr) aux
               marketplaces B2C/B2B (Opisto), en passant par des projets de R&amp;D et de
-              réalité augmentée — m&apos;a forgé une vision à la fois technique et produit,
+              réalité augmentée - m&apos;a forgé une vision à la fois technique et produit,
               rare chez un prestataire indépendant.
             </p>
             <p>
@@ -909,7 +909,7 @@ export default function About() {
             </p>
             <p>
               Ce qui me distingue&nbsp;: je ne sous-traite pas vos besoins, je les comprends.
-              Chaque projet démarre par une vraie conversation — pour livrer quelque chose qui
+              Chaque projet démarre par une vraie conversation - pour livrer quelque chose qui
               vous ressemble et qui fonctionne.
             </p>
           </div>
@@ -1015,12 +1015,12 @@ describe('transformReview', () => {
 })
 ```
 
-- [ ] **Step 2: Run test — confirm it fails**
+- [ ] **Step 2: Run test - confirm it fails**
 
 ```bash
 npx jest __tests__/google-places.test.ts
 ```
-Expected: FAIL — `transformReview` is not defined.
+Expected: FAIL - `transformReview` is not defined.
 
 - [ ] **Step 3: Create lib/google-places.ts**
 
@@ -1082,12 +1082,12 @@ export async function getGoogleReviews(): Promise<ReviewsResult> {
 }
 ```
 
-- [ ] **Step 4: Run test — confirm it passes**
+- [ ] **Step 4: Run test - confirm it passes**
 
 ```bash
 npx jest __tests__/google-places.test.ts
 ```
-Expected: PASS — 2 tests.
+Expected: PASS - 2 tests.
 
 - [ ] **Step 5: Create Reviews.tsx (async Server Component)**
 
@@ -1269,12 +1269,12 @@ describe('validateContactForm', () => {
 })
 ```
 
-- [ ] **Step 2: Run tests — confirm they fail**
+- [ ] **Step 2: Run tests - confirm they fail**
 
 ```bash
 npx jest __tests__/contact-validation.test.ts
 ```
-Expected: FAIL — `validateContactForm` not found.
+Expected: FAIL - `validateContactForm` not found.
 
 - [ ] **Step 3: Create lib/contact-validation.ts**
 
@@ -1294,7 +1294,7 @@ export type ContactFormData = {
 }
 
 export function validateContactForm(data: ContactFormData): string | null {
-  if (data.website) return null // honeypot filled — silently pass
+  if (data.website) return null // honeypot filled - silently pass
 
   const requiredFields: (keyof ContactFormData)[] = [
     'nom', 'prenom', 'email', 'codePostal', 'telephone', 'message',
@@ -1322,12 +1322,12 @@ export function validateContactForm(data: ContactFormData): string | null {
 }
 ```
 
-- [ ] **Step 4: Run tests — confirm they pass**
+- [ ] **Step 4: Run tests - confirm they pass**
 
 ```bash
 npx jest __tests__/contact-validation.test.ts
 ```
-Expected: PASS — 10 tests.
+Expected: PASS - 10 tests.
 
 - [ ] **Step 5: Create app/actions/contact.ts**
 
@@ -1396,10 +1396,10 @@ export async function submitContact(
     from: `"Valdence Digital" <${process.env.SMTP_USER}>`,
     to: process.env.SMTP_TO,
     replyTo: data.email,
-    subject: `Nouveau contact — ${data.prenom} ${data.nom}`,
+    subject: `Nouveau contact - ${data.prenom} ${data.nom}`,
     text: lines.join('\n'),
     html: `
-      <h2>Nouveau contact — Valdence Digital</h2>
+      <h2>Nouveau contact - Valdence Digital</h2>
       <table cellpadding="6">
         <tr><td><strong>Nom</strong></td><td>${data.nom}</td></tr>
         <tr><td><strong>Prénom</strong></td><td>${data.prenom}</td></tr>
@@ -1473,7 +1473,7 @@ export default function Contact() {
         </div>
       ) : (
         <form action={action} className="max-w-2xl space-y-5" noValidate>
-          {/* Honeypot — invisible pour les humains */}
+          {/* Honeypot - invisible pour les humains */}
           <input
             type="text"
             name="website"
@@ -1630,7 +1630,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start gap-2">
           <Image src="/logo-light.svg" alt="Valdence Digital" width={140} height={35} />
           <p className="font-dm-sans text-xs text-white/50">
-            © 2026 Valdence Digital — Tous droits réservés
+            © 2026 Valdence Digital - Tous droits réservés
           </p>
         </div>
         <nav aria-label="Liens légaux">
@@ -1662,7 +1662,7 @@ export default function Footer() {
 - [ ] **Step 2: Finalize page.tsx**
 
 ```typescript
-// app/page.tsx — état final
+// app/page.tsx - état final
 import Navbar from '@/components/sections/Navbar'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
@@ -1695,7 +1695,7 @@ export default function Home() {
 ```bash
 npx jest
 ```
-Expected: PASS — 12 tests (10 contact-validation + 2 google-places).
+Expected: PASS - 12 tests (10 contact-validation + 2 google-places).
 
 ```bash
 npm run build
@@ -1725,7 +1725,7 @@ git commit -m "feat: add Footer, finalize page composition, verify build"
 - [ ] **Step 1: Create Dockerfile**
 
 ```dockerfile
-# Stage 1 — Dependencies + build
+# Stage 1 - Dependencies + build
 FROM node:20-alpine AS builder
 WORKDIR /app
 
@@ -1735,7 +1735,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2 — Production runner
+# Stage 2 - Production runner
 FROM node:20-alpine AS runner
 WORKDIR /app
 
@@ -1799,4 +1799,4 @@ git commit -m "feat: add Dockerfile multi-stage for Coolify deployment"
 | `.gitignore` mis à jour | Déjà fait (session brainstorming) |
 | SEO metadata + `lang="fr"` | Task 2 |
 | Dockerfile multi-stage Coolify | Task 14 |
-| Tests unitaires validation + Places | Tasks 10–11 |
+| Tests unitaires validation + Places | Tasks 10-11 |

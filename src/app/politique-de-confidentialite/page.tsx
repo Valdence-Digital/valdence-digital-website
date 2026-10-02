@@ -4,7 +4,7 @@ import Footer from '@/components/sections/Footer'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 
 export const metadata: Metadata = {
-  title: 'Politique de confidentialité — Valdence Digital',
+  title: 'Politique de confidentialité - Valdence Digital',
   robots: { index: false, follow: false },
 }
 
@@ -111,7 +111,7 @@ export default function PolitiqueConfidentialite() {
           <section>
             <h2 className="font-sora text-xl font-semibold text-foreground mb-3">9. Vos droits</h2>
             <p>
-              Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la
+              Conformément au Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679) et à la
               loi Informatique et Libertés, vous disposez des droits suivants concernant vos données personnelles :
             </p>
             <ul className="mt-2 space-y-1 ml-4 list-disc">

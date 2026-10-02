@@ -39,7 +39,7 @@ export default function Services() {
         Mes services
       </h2>
       <p className="font-dm-sans text-muted max-w-xl mb-12">
-        De la vitrine au logiciel métier — et au renfort technique pour agences et équipes internes.
+        De la vitrine au logiciel métier - et au renfort technique pour agences et équipes internes.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map(({ Icon, title, description }) => (
