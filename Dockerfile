@@ -1,9 +1,16 @@
+# syntax=docker/dockerfile:1
+
 # Stage 1 - Dependencies + build
 FROM node:lts-alpine AS builder
+
+RUN npm install -g corepack
+
+RUN corepack enable pnpm
+
 WORKDIR /app
 
 COPY package*.json pnpm-lock.yaml* pnpm-workspace.yaml ./
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 RUN pnpm build
