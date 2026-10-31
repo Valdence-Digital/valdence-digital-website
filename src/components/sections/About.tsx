@@ -11,8 +11,10 @@ import {
   siPostgresql,
   siWordpress,
   siOvh,
+  siClaude,
 } from 'simple-icons'
 import IconCSharp from '@/components/ui/IconCSharp'
+import IconOpenAI from '@/components/ui/IconOpenAI'
 
 type TechItem = {
   label: string
@@ -30,6 +32,43 @@ const techStack: TechItem[] = [
   { icon: siWordpress, label: 'WordPress' },
   { icon: siOvh, label: 'OVHcloud' },
 ]
+
+const aiStack: TechItem[] = [
+  { label: 'ChatGPT & Codex', CustomIcon: IconOpenAI },
+  { icon: siClaude, label: 'Claude & Claude Code' },
+]
+
+const badgeGroups = [
+  { title: 'Technologies', items: techStack },
+  { title: 'IA', items: aiStack },
+]
+
+function TechBadges({ items }: { items: TechItem[] }) {
+  return (
+    <div className="flex flex-wrap gap-3">
+      {items.map(({ icon, CustomIcon, label }) => (
+        <div
+          key={label}
+          className="flex items-center gap-3 px-4 py-2 rounded-full border border-gray-200 bg-white hover:border-teal/40 transition-colors"
+        >
+          {CustomIcon && <CustomIcon className="w-5 h-5 shrink-0" aria-hidden="true" />}
+          {icon && (
+            <svg
+              role="img"
+              viewBox="0 0 24 24"
+              className="w-5 h-5 shrink-0"
+              aria-hidden="true"
+              style={{ fill: `#${icon.hex}` }}
+            >
+              <path d={icon.path} />
+            </svg>
+          )}
+          <span className="text-base font-dm-sans text-foreground/80">{label}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 const linkedInPath =
   'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'
@@ -103,32 +142,15 @@ export default function About() {
           </div>
 
           {/* Tech badges */}
-          <div className="mt-10 pt-8 border-t border-teal/20">
-            <p className="text-base font-dm-sans tracking-[0.2em] text-muted uppercase mb-4">
-              Technologies
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {techStack.map(({ icon, CustomIcon, label }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-3 px-4 py-2 rounded-full border border-gray-200 bg-white hover:border-teal/40 transition-colors"
-                >
-                  {CustomIcon && <CustomIcon className="w-5 h-5 shrink-0" aria-hidden="true" />}
-                  {icon && (
-                    <svg
-                      role="img"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5 shrink-0"
-                      aria-hidden="true"
-                      style={{ fill: `#${icon.hex}` }}
-                    >
-                      <path d={icon.path} />
-                    </svg>
-                  )}
-                  <span className="text-base font-dm-sans text-foreground/80">{label}</span>
-                </div>
-              ))}
-            </div>
+          <div className="mt-10 pt-8 border-t border-teal/20 space-y-8">
+            {badgeGroups.map(({ title, items }) => (
+              <div key={title}>
+                <p className="text-base font-dm-sans tracking-[0.2em] text-muted uppercase mb-4">
+                  {title}
+                </p>
+                <TechBadges items={items} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
