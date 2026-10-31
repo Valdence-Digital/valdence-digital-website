@@ -22,11 +22,11 @@ export default function Hero() {
           <span className="text-teal">Je crée avec vous.</span>
         </h1>
         <p className="font-dm-sans text-xl text-muted max-w-xl mb-10 leading-relaxed">
-          Développeur full-stack indépendant, je travaille avec vous pour créer des outils digitaux qui vous ressemblent.
+          Développeur full-stack indépendant, je crée, j&apos;améliore et je fais connaître vos sites web. Référencement Google, visibilité dans les IA et outils sur mesure, à votre image.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button href="#contact" variant="primary">Parlons de votre projet <ArrowRight className="inline w-4 h-4" /></Button>
-          <Button href="#services" variant="outline">Mes services</Button>
+          <Button href="#audit" variant="outline">Audit offert de votre site</Button>
         </div>
       </div>
     </section>

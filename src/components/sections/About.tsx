@@ -76,12 +76,20 @@ export default function About() {
         <div className="flex-1">
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm space-y-4 font-dm-sans text-muted leading-relaxed">
             <p>
-              Développeur full-stack indépendant depuis 2014, je conçois et réalise des sites
-              vitrines, boutiques en ligne, applications web et intégrations sur mesure. Mon
+              Développeur full-stack indépendant depuis 2014, je conçois, améliore et fais
+              connaître des sites vitrines, boutiques en ligne, applications web et intégrations
+              sur mesure. Mon
               parcours en entreprise - de l&apos;e-commerce grand public (Chausson.fr) aux
               marketplaces B2C/B2B (Opisto), en passant par des projets de R&amp;D et de
               réalité augmentée - m&apos;a forgé une vision à la fois technique et produit,
               rare chez un prestataire indépendant.
+            </p>
+            <p>
+              Au-delà du code, j&apos;accompagne mes clients sur leur visibilité&nbsp;:
+              référencement local sur Google et Google Maps, et présence dans les réponses des
+              IA comme ChatGPT ou Perplexity. J&apos;intègre aussi l&apos;IA dans leurs outils
+              quand elle apporte un vrai gain&nbsp;: automatisation, assistants, traitement de
+              contenus.
             </p>
             <p>
               Je travaille avec une attention constante portée à la qualité du code, à la

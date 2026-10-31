@@ -5,15 +5,15 @@ import ExpandableText from '@/components/ui/ExpandableText'
 const projects = [
   {
     title: "Sagesse d'Âme",
-    category: 'Site vitrine',
+    category: 'Site vitrine & SEO local',
     image: '/portfolio/sagesse-holistique.webp',
     url: 'https://www.sagesse-holistique.fr/',
     description:
-      "Conception et développement complets d'un site vitrine en Next.js (App Router) : architecture moderne, performances optimisées et SEO intégré dès la conception. Hébergement pris en charge sur une infrastructure souveraine européenne, incluant le déploiement, la supervision et les sauvegardes automatisées. Maintien en condition opérationnelle et évolutions fonctionnelles assurés en continu, selon les besoins du client.",
+      "Résultat : première page sur Google et Google Maps pour les recherches locales de son domaine, avec des clients qui arrivent désormais via internet. Conception et développement complets d'un site vitrine en Next.js (App Router), travail de référencement local et de visibilité dans les IA, performances optimisées. Hébergement pris en charge sur une infrastructure souveraine européenne, incluant le déploiement, la supervision et les sauvegardes automatisées. Maintien en condition opérationnelle et évolutions fonctionnelles assurés en continu, selon les besoins du client.",
   },
   {
     title: 'Jonathan Deymier',
-    category: 'Refonte WordPress',
+    category: 'Amélioration WordPress',
     image: '/portfolio/jonathan-deymier.webp',
     url: 'https://www.jonathandeymier.com/',
     description:
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title: 'Harmonie Piano',
-    category: 'Application e-learning',
+    category: 'Migration e-learning',
     image: '/portfolio/harmonie-piano.webp',
     url: 'https://formation.harmonie-piano.com/',
     description:

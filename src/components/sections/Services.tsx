@@ -1,33 +1,7 @@
-import { Globe, ShoppingCart, Wrench, Users } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import SectionWrapper from '@/components/ui/SectionWrapper'
-
-const services: { Icon: LucideIcon; title: string; description: string }[] = [
-  {
-    Icon: Globe,
-    title: 'Sites vitrines',
-    description:
-      'Présence en ligne professionnelle, rapide à lancer et facile à maintenir. Un site qui vous représente et rassure vos visiteurs dès le premier regard.',
-  },
-  {
-    Icon: ShoppingCart,
-    title: 'Sites e-commerce',
-    description:
-      'Boutiques performantes, conçues pour convertir et fidéliser. Du catalogue produits au tunnel de paiement, pensés pour la croissance.',
-  },
-  {
-    Icon: Wrench,
-    title: 'Applications web',
-    description:
-      "Outils métier sur mesure, robustes, évolutifs et bien documentés. Des solutions pensées pour votre usage réel, pas pour une démo.",
-  },
-  {
-    Icon: Users,
-    title: 'Consulting & Assistance Technique',
-    description:
-      "Accompagnement technique en entreprise : audit, conseil, renfort d'équipe. Une expertise full-stack disponible quand vous en avez besoin.",
-  },
-]
+import Button from '@/components/ui/Button'
+import { services } from '@/data/services'
 
 export default function Services() {
   return (
@@ -39,9 +13,10 @@ export default function Services() {
         Mes services
       </h2>
       <p className="font-dm-sans text-muted max-w-xl mb-12">
-        De la vitrine au logiciel métier - et au renfort technique pour agences et équipes internes.
+        Créer votre site, améliorer celui que vous avez déjà, et faire en sorte qu&apos;on vous trouve.
+        Avec l&apos;IA comme alliée, pour vous et pour vos outils.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map(({ Icon, title, description }) => (
           <div
             key={title}
@@ -54,6 +29,28 @@ export default function Services() {
             <p className="font-dm-sans text-muted leading-relaxed text-base">{description}</p>
           </div>
         ))}
+      </div>
+
+      {/* Offre d'entrée : audit offert */}
+      <div
+        id="audit"
+        className="mt-10 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-xl bg-teal-dark p-8 md:p-10"
+      >
+        <div className="max-w-2xl">
+          <p className="text-sm font-dm-sans tracking-[0.3em] text-teal uppercase mb-2">
+            Offert
+          </p>
+          <h3 className="font-sora text-2xl font-semibold text-white mb-3">
+            Votre site mérite mieux&nbsp;? Je l&apos;audite gratuitement.
+          </h3>
+          <p className="font-dm-sans text-white/70 leading-relaxed">
+            Vitesse, référencement Google, visibilité dans les IA, affichage mobile&nbsp;: vous recevez
+            un bilan clair et une liste d&apos;améliorations prioritaires. Sans engagement.
+          </p>
+        </div>
+        <Button href="#contact" variant="primary" className="shrink-0 self-start md:self-center">
+          Demander mon audit offert <ArrowRight className="inline w-4 h-4" />
+        </Button>
       </div>
     </SectionWrapper>
   )

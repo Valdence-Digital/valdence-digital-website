@@ -5,7 +5,7 @@ const reasons = [
     number: '01',
     title: 'Expertise qui sert votre projet',
     description:
-      'Full-stack confirmé - C#/.NET, Next.js, PostgreSQL et plus. 10 ans de pratique, côté entreprise et indépendant. Je choisis les bons outils pour votre contexte, pas ceux qui font le buzz.',
+      "Full-stack confirmé - C#/.NET, Next.js, PostgreSQL et plus. Plus de 10 ans de pratique, côté entreprise et indépendant. J'utilise l'IA au quotidien pour livrer plus vite, sans lui déléguer la qualité : chaque ligne livrée est relue et maîtrisée.",
   },
   {
     number: '02',
