@@ -93,9 +93,12 @@ export function buildHomeJsonLd() {
           'Création, audit et référencement de sites web à Toulouse : sites vitrines, e-commerce, applications web, SEO local, visibilité dans les IA et intégration de l\'IA.',
         slogan: 'Je ne code pas pour vous. Je crée avec vous.',
         telephone: '+33673906351',
+        priceRange: 'Sur devis',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Toulouse',
+          streetAddress: '15 Rue de la Serre',
+          postalCode: '31460',
+          addressLocality: 'Le Cabanial',
           addressRegion: 'Occitanie',
           addressCountry: 'FR',
         },
