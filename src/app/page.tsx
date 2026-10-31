@@ -8,10 +8,15 @@ import Reviews from '@/components/sections/Reviews'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/sections/Footer'
 import BackToTop from '@/components/ui/BackToTop'
+import { buildHomeJsonLd, serializeJsonLd } from '@/lib/structured-data'
 
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildHomeJsonLd()) }}
+      />
       <Navbar />
       <Hero />
       <Services />
