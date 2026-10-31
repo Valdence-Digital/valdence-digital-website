@@ -1,10 +1,11 @@
 'use client'
 
-import { useActionState, useState } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 import { MapPin, Phone } from 'lucide-react'
 import { submitContact } from '@/app/actions/contact'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 import { contactSchema } from '@/lib/contact-validation'
+import { freeAudit } from '@/data/audit'
 
 const RGPD_TEXT =
   "J'ai été informé.e de mon droit de suppression, mon droit de consultation, et mon droit de modification des données personnelles récoltées sur ce formulaire. Mais aussi de la procédure d'exercice de mes droits, de la durée de conservation de mes données, et des conditions de gestions de ces dernières."
@@ -46,6 +47,23 @@ export default function Contact() {
   const change = (f: FieldName, v: string) => setValues((p) => ({ ...p, [f]: v }))
   const blur = (f: FieldName) => setDirty((p) => ({ ...p, [f]: true }))
 
+  // Boutons « audit offert » : pré-remplit le message s'il est encore vide.
+  // Écoute les clics (la navigation par ancre de next/link ne déclenche pas hashchange)
+  // et l'ancre présente au chargement (lien partagé).
+  useEffect(() => {
+    const prefill = () =>
+      setValues((p) => (p.message.trim() ? p : { ...p, message: freeAudit.prefilledMessage }))
+
+    if (window.location.hash === `#${freeAudit.anchor}`) prefill()
+
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest('a')
+      if (link?.hash === `#${freeAudit.anchor}`) prefill()
+    }
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [])
+
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     setDirty(Object.fromEntries(REQUIRED.map((f) => [f, true])) as Record<FieldName, boolean>)
     if (!zodResult.success) e.preventDefault()
@@ -53,6 +71,8 @@ export default function Contact() {
 
   return (
     <SectionWrapper id="contact" className="relative overflow-hidden">
+      {/* Cible des boutons « audit offert » (même position que #contact) */}
+      <div id={freeAudit.anchor} aria-hidden="true" className="absolute top-0" />
       <div aria-hidden="true" className="absolute -left-20 -bottom-20 w-72 h-72 rounded-full border border-teal/8 pointer-events-none" />
 
       <p className="text-sm font-dm-sans tracking-[0.3em] text-teal uppercase mb-3">

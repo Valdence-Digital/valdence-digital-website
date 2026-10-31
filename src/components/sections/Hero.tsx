@@ -1,5 +1,6 @@
 import Button from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import { freeAudit } from '@/data/audit'
 
 export default function Hero() {
   return (
@@ -26,7 +27,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button href="#contact" variant="primary">Parlons de votre projet <ArrowRight className="inline w-4 h-4" /></Button>
-          <Button href="#audit" variant="outline">Audit offert de votre site</Button>
+          <Button href={`#${freeAudit.anchor}`} variant="outline">Audit offert de votre site</Button>
         </div>
       </div>
     </section>

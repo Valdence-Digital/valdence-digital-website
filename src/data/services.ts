@@ -63,10 +63,3 @@ export const services: Service[] = [
     serviceType: 'Conseil technique et assistance technique full-stack',
   },
 ]
-
-/** Audit offert mis en avant sous les services (section #audit) */
-export const freeAudit = {
-  name: 'Audit offert de votre site web',
-  description:
-    "Vitesse, référencement Google, visibilité dans les IA, affichage mobile : un bilan clair et une liste d'améliorations prioritaires. Sans engagement.",
-}

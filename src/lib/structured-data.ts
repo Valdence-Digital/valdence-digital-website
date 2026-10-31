@@ -1,4 +1,5 @@
-import { services, freeAudit } from '@/data/services'
+import { services } from '@/data/services'
+import { freeAudit } from '@/data/audit'
 import { socialLinks } from '@/data/social'
 
 // Données structurées (JSON-LD) de la page d'accueil.

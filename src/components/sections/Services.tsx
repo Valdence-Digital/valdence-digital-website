@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 import Button from '@/components/ui/Button'
 import { services } from '@/data/services'
+import { freeAudit } from '@/data/audit'
 
 export default function Services() {
   return (
@@ -48,7 +49,7 @@ export default function Services() {
             un bilan clair et une liste d&apos;améliorations prioritaires. Sans engagement.
           </p>
         </div>
-        <Button href="#contact" variant="primary" className="shrink-0 self-start md:self-center">
+        <Button href={`#${freeAudit.anchor}`} variant="primary" className="shrink-0 self-start md:self-center">
           Demander mon audit offert <ArrowRight className="inline w-4 h-4" />
         </Button>
       </div>
